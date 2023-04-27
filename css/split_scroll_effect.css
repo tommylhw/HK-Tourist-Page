@@ -1,0 +1,94 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.split-effect, .split-effect-2 {
+	height: 300vh;
+	display: flex;
+	/*padding: 20px;*/
+	/*background: yellow;*/
+}
+
+.split-effect-2 {
+	background: #ffffff;
+	height: 300vh;
+}
+
+.stay {
+	width: 50%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	text-align: center;
+	/*padding: 0 20px;*/
+	color: #000000;
+	margin: 0!important;
+}
+
+.scroll {
+	width: 50%;
+}
+
+/*.scroll div {
+	height: 100vh;
+	padding: 0 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.scroll div > h3 {
+	font-size: 25px;
+	text-align: center;
+	margin-bottom: 2.5rem;
+}*/
+
+.scroll div:nth-child(1) {
+	
+}
+
+.scroll div:nth-child(2) {
+	
+}
+
+.scroll div:nth-child(3) {
+
+}
+
+.split-effect-2 div:nth-child(1) {
+	order: 1;
+}
+
+/*-----------------------responsive-----------------------*/
+@media screen and (max-width: 780px) { /* iPad Mini PORTRAIT */
+	.stay {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 500px) { /* mobile */
+	.split-effect, .split-effect-2 {
+		flex-direction: column;
+		height: auto;
+	}
+
+	.split-effect-2 div:nth-child(1) {
+		order: 0;
+	}
+
+	.stay {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	.scroll {
+		width: 100%;
+		height: auto;
+	}
+}

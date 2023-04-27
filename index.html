@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-hk">
+<head>
+	<meta charset="UTF-8">
+	<title>香港旅客資訊站</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="Library/fontawesome/css/all.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- slider -->
+	<link rel='stylesheet prefetch' href='http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css'>
+	<script src='http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js'></script>
+	<script src="Library/scrollmagic/minified/ScrollMagic.min.js"></script>
+	<script src="Library/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+	<link rel="stylesheet" href="Library/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="Library/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+	<script src="js/owl_carousel_setup.js"></script>
+	<script src="Library/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+	<!--custom file-->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/rellax_speed.css">
+	<link rel="stylesheet" href="css/split_scroll_effect.css">
+	<link rel="stylesheet" href="css/owl_carousel.css">
+	<script src="js/scroll_indicator.js"></script>
+	<script src="js/rellax.min.js"></script>
+	<script src="js/BackToTop.js"></script>
+  <script src="js/AnchorLink.js"></script>
+  <script src="js/navbar.js"></script>
+</head>
+<body>
+	<a class="scroll-top">
+		<span id="scroll-back-btn"><i class="fas fa-chevron-up"></i></span>
+	</a>
+
+	<!--navbar-->
+	<header class="navbar">
+		<div class="progress-container">
+    	<div class="progress-bar" id="myBar"></div>
+  	</div>
+
+		<nav>
+			<div>
+				<!-- <a href="index.html"><img src="Sources/img/WebLogo.png" alt="Web logo"></a> -->
+				<a href="index.html"><h1 class="navbar-text">香港旅客資訊站</h1></a>
+			</div>
+			
+			<input type="checkbox" id="nav-check">
+			<label for="nav-check"><i class="fas fa-bars navbar-text" id="hamburger-bar"></i></label>
+			
+			<ul class="nav-links nav-check">
+				<li><a href="#transportation" class="navbar-text">交通</a></li>
+				<li><a href="#attraction" class="navbar-text">旅遊景點</a></li>
+				<li><a href="#" class="navbar-text">美食</a></li>
+				<li><a href="#" class="navbar-text">購物熱點</a></li>
+				<!-- <li><a href="#" class="drop-down">美食<i class="fas fa-caret-down" id="dropdown-icon"></i></a>
+					<ul>
+						<li><a href="#idea">IDEA OF INVENTION</a></li>
+						<li><a href="#feature">INVENTION FEATURE</a></li>
+						<li><a href="#work-flow">INVENTION WORK FLOW</a></li>
+						<li><a href="#report">ANALYSIS REPORT</a></li>
+						<li><a href="#awards">AWARDS</a></li>
+						<li><a href="#recognition">RECOGNITION</a></li>
+						<li><a href="#video">VIDEO INTRODUCTION</a></li>
+						<li><a href="#timeline">INVENTION TIMELINE</a></li>
+					</ul>
+				</li> -->
+				<li><a id="lang-selector" onclick="OpenLang()"><i class="fas fa-globe-europe nav-check navbar-text" id="language-icon"></i></a></li>
+				<li id="user-acc"><a href="#" class="drop-down nav-check navbar-text"><i class="fas fa-user" id="user-icon"></i></a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="main">
+		<div class="wrapper">
+			<div class="owl-carousel owl-theme">
+		    <div class="item"><img src="img/main/HK1.jpg" alt="Hong Kong" class="main-img"></div>
+		    <div class="item"><img src="img/main/HK2.jpg" alt="Hong Kong" class="main-img"></div>
+		    <div class="item"><img src="img/main/HK3.jpg" alt="Hong Kong" class="main-img"></div>
+		    <div class="item"><img src="img/main/HK4.jpg" alt="Hong Kong" class="main-img"></div>
+		    <div class="item"><img src="img/main/HK5.jpg" alt="Hong Kong" class="main-img"></div>
+		    <div class="item"><img src="img/main/HK6.jpg" alt="Hong Kong" class="main-img"></div>
+		    <div class="item"><img src="img/main/HK7.jpg" alt="Hong Kong" class="main-img"></div>
+		    <div class="item"><img src="img/main/HK8.jpg" alt="Hong Kong" class="main-img"></div>
+		    <div class="item"><img src="img/main/HK9.jpg" alt="Hong Kong" class="main-img"></div>
+		</div>
+
+		<div class="control">
+			<div class="nav-control">
+				<span class="prev nav-btn"><i class="fas fa-angle-left"></i></span>
+				<span class="next nav-btn"><i class="fas fa-angle-right"></i></span>
+			</div>
+			<div class="auto-play-control">
+				<span class="auto-btn" onclick="AutoPlayController()"><i class="fas fa-pause-circle" id="play-pause-btn"></i></span>
+			</div>
+		</div>
+	</div>
+		
+		<div class="main-content-container rellax" data-rellax-speed="0">
+			<h1 class="main-title">香港</h1>
+			<h2 class="main-content">你的最佳旅遊首選</h2>
+
+			<button class="start-btn">
+				<a href="#transportation">
+					開始探索
+					<i class="fas fa-angle-double-down"></i>
+				</a>
+			</button>
+		</div>
+	</section>
+
+	<section class="map"> <div class="header-box"></div>
+		<div class="content-title-container">
+			<h1>網頁指南</h1>
+			<hr>
+		</div>
+
+		<div class="map-container">
+			<div class="map-content-container">
+				<div class="map-content">
+					<h1>機場交通</h1>
+					<a href="#">link</a>
+					<a href="#">link</a>
+					<a href="#">link</a>
+					<a href="#">link</a>
+				</div>
+
+				<div class="map-content">
+					<h1>機場交通</h1>
+					<a href="#">link</a>
+					<a href="#">link</a>
+					<a href="#">link</a>
+					<a href="#">link</a>
+				</div>
+
+				<div class="map-content">
+					<h1>機場交通</h1>
+					<a href="#">link</a>
+					<a href="#">link</a>
+					<a href="#">link</a>
+					<a href="#">link</a>
+				</div>
+
+				<div class="map-content">
+					<h1>機場交通</h1>
+					<a href="#">link</a>
+					<a href="#">link</a>
+					<a href="#">link</a>
+					<a href="#">link</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="transport" id="transportation"> <div class="header-box"></div>
+		<div class="content-title-container">
+			<h1>機場交通</h1>
+			<hr>
+		</div>
+
+		<div class="transport-container">
+			<div class="transport-content-container">
+				<div class="transport-img">
+					<img src="img/transportation/mtr.jpg" alt="MTR">
+				</div>
+
+				<div class="transport-content">
+					<h1>機場快線</h1>
+					<p>乘搭快捷舒適的機場快綫來往機場與中環，車程只需24分鐘</p>
+				</div>
+			</div>
+
+			<div class="transport-content-container">
+				<div class="transport-img">
+					<img src="img/transportation/bus.jpg" alt="MTR">
+				</div>
+
+				<div class="transport-content">
+					<h1>公共巴士</h1>
+					<p>香港國際機場設有完善的公共巴士路線，為旅客提供方便及價格相宜的交通服務選擇。</p>
+				</div>
+			</div>
+
+			<div class="transport-content-container">
+				<div class="transport-img">
+					<img src="img/transportation/hotel_bus.jpg" alt="MTR">
+				</div>
+
+				<div class="transport-content">
+					<h1>酒店巴士</h1>
+					<p>旅客如已預訂香港大型酒店，可前往設於一號客運大樓接機大堂B的商業服務櫃檯，預約乘搭酒店巴士直達酒店。</p>
+				</div>
+			</div>
+
+			<div class="transport-content-container">
+				<div class="transport-img">
+					<img src="img/transportation/taxi.jpg" alt="MTR">
+				</div>
+
+				<div class="transport-content">
+					<h1>的士</h1>
+					<p>的士提供點對點的交通服務，接載乘客往來香港國際機場。抵港旅客在步出接機大堂後，可經左邊的緩坡道前往的士站候車。</p>
+				</div>
+			</div>
+		</div>
+	</section>
+ 
+
+	<section class="attraction" id="attraction"> <div class="header-box"></div>
+		<div class="content-title-container">
+			<h1>旅遊景點</h1>
+			<hr>
+		</div>
+
+		<div class="attraction-menu">
+			<ul>
+				<li><a href="#peak">太平山頂</a></li>
+				<li><a href="#">海洋公園</a></li>
+				<li><a href="#">尖沙咀海濱長廊</a></li>
+			</ul>
+		</div>
+
+		<div class="split-effect" id="peak">
+			<div class="stay stay-effect-1">
+				<h2>太平山頂</h2>
+				<div class="attraction-img-container">
+					<img src="img/attraction/peak_01.jpg" alt="" class="attraction-img" id="peak-model-img">
+				</div>
+				
+				<div class="attraction-img-gallery">
+					<img src="img/attraction/peak_01.jpg" alt="" class="gallery-img peak-gallery">
+					<img src="img/attraction/peak_02.jpg" alt="" class="gallery-img peak-gallery">
+					<img src="img/attraction/peak_03.jpg" alt="" class="gallery-img peak-gallery">
+				</div>
+			</div>
+
+			<div class="scroll">
+				<div class="peak-content-container">
+					<div class="peak-content">
+						<h3>最好的時候、最佳的觀景點</h3>
+						<p>到太平山頂，最好是選擇接近黃昏的時候，這樣既能觀賞到白天的城市景觀，又可以靜待夜幕低垂時，整個城市在瞬間變幻的一刻。在太平山頂上有數個觀景台，包括盧吉道觀景台、獅子亭、位於山頂廣場頂層的免費觀景台Green Terrace，以及凌霄閣頂層的觀景台「凌霄閣摩天台428」。山頂廣場和凌霄閣同樣集觀景與購物享樂於一體，裡頭有多家餐廳讓您一邊用餐，一邊觀景，從高級西餐廳、露天咖啡廳，以至連鎖快餐店都有，豐儉由人。在凌霄閣，您還可以逛逛香港杜莎夫人蠟像館。</p>
+					</div>
+						
+					<div class="peak-content">
+						<h3>山頂纜車</h3>
+						<p>登太平山，最好玩就是乘搭山頂纜車去。在車廂內隨纜車沿陡峭的斜坡上去，路旁的林木和高樓大廈彷彿往後倒退，別有一番滋味。纜車的來回車票售價，比單程車票便宜，如果您打算來回都乘坐纜車的話，買來回車票則比較划算。</p>
+					</div>
+
+					<h1>如果您只能遊覽香港一個景點，去太平山頂吧！</h1>
+				</div>
+
+				<div class="peak-content-container">
+					<div class="peak-content">
+						<h3>資訊</h3>
+						<table class="peak-info">
+							<tr>
+								<th>地址：</th>
+								<td>香港島太平山頂</td>
+							</tr>
+							<tr>
+								<th>查詢：</th>
+								<td>+852 2849 0668 （凌霄閣）<br> +852 2522 0922 （山頂纜車） <br> +852 2849 4113 (山頂廣場)</td>
+							</tr>
+							<tr>
+								<th>網址：</th>
+								<td><a href="https://www.thepeak.com.hk" target="_blank">www.thepeak.com.hk</a> <br> <a href="https://www.thepeakgalleria.com" target="_blank">www.thepeakgalleria.com</a></td>
+							</tr>
+						</table>
+					</div>
+
+					<div class="peak-content">
+						<h3>如何前往</h3>
+						<ul>
+							<li>從中環8碼頭搭乘15C號巴士，或港鐵中環站 J2出口步行至花園道山頂纜車站，再搭乘山頂纜車登山。</li>
+							<li>於港鐵香港站D出口的中環交易廣場巴士總站，搭乘15號巴士。</li>
+							<li>於港鐵香港站E出口的公共運輸交匯處，搭乘1號綠色小巴。</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="peak-content-container">
+					<h3>影片介紹</h3>
+					<div class="peak-content attraction-video-container">
+						<iframe class="attraction-video" width="560" height="315" src="https://www.youtube.com/embed/T-HxU6PcJ-Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+
+					<div class="peak-content attraction-video-container">
+						<iframe class="attraction-video" width="560" height="315" src="https://www.youtube.com/embed/T-HxU6PcJ-Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="split-effect-2" id="op">
+			<div class="stay stay-effect-2">
+				<h2>香港海洋公園</h2>
+				<div class="attraction-img-container">
+					<img src="img/attraction/peak_01.jpg" alt="" class="attraction-img" id="peak-model-img">
+				</div>
+				
+				<div class="attraction-img-gallery">
+					<img src="img/attraction/peak_01.jpg" alt="" class="gallery-img peak-gallery">
+					<img src="img/attraction/peak_02.jpg" alt="" class="gallery-img peak-gallery">
+					<img src="img/attraction/peak_03.jpg" alt="" class="gallery-img peak-gallery">
+				</div>
+			</div>
+
+			<div class="scroll">
+				<div class="peak-content-container">
+					<div class="peak-content">
+						<h3>最好的時候、最佳的觀景點</h3>
+						<p>到太平山頂，最好是選擇接近黃昏的時候，這樣既能觀賞到白天的城市景觀，又可以靜待夜幕低垂時，整個城市在瞬間變幻的一刻。在太平山頂上有數個觀景台，包括盧吉道觀景台、獅子亭、位於山頂廣場頂層的免費觀景台Green Terrace，以及凌霄閣頂層的觀景台「凌霄閣摩天台428」。山頂廣場和凌霄閣同樣集觀景與購物享樂於一體，裡頭有多家餐廳讓您一邊用餐，一邊觀景，從高級西餐廳、露天咖啡廳，以至連鎖快餐店都有，豐儉由人。在凌霄閣，您還可以逛逛香港杜莎夫人蠟像館。</p>
+					</div>
+						
+					<div class="peak-content">
+						<h3>山頂纜車</h3>
+						<p>登太平山，最好玩就是乘搭山頂纜車去。在車廂內隨纜車沿陡峭的斜坡上去，路旁的林木和高樓大廈彷彿往後倒退，別有一番滋味。纜車的來回車票售價，比單程車票便宜，如果您打算來回都乘坐纜車的話，買來回車票則比較划算。</p>
+					</div>
+
+					<h1>如果您只能遊覽香港一個景點，去太平山頂吧！</h1>
+				</div>
+
+				<div class="peak-content-container">
+					<div class="peak-content">
+						<h3>資訊</h3>
+						<table class="peak-info">
+							<tr>
+								<th>地址：</th>
+								<td>香港島太平山頂</td>
+							</tr>
+							<tr>
+								<th>查詢：</th>
+								<td>+852 2849 0668 （凌霄閣）<br> +852 2522 0922 （山頂纜車） <br> +852 2849 4113 (山頂廣場)</td>
+							</tr>
+							<tr>
+								<th>網址：</th>
+								<td><a href="https://www.thepeak.com.hk" target="_blank">www.thepeak.com.hk</a> <br> <a href="https://www.thepeakgalleria.com" target="_blank">www.thepeakgalleria.com</a></td>
+							</tr>
+						</table>
+					</div>
+
+					<div class="peak-content">
+						<h3>如何前往</h3>
+						<ul>
+							<li>從中環8碼頭搭乘15C號巴士，或港鐵中環站 J2出口步行至花園道山頂纜車站，再搭乘山頂纜車登山。</li>
+							<li>於港鐵香港站D出口的中環交易廣場巴士總站，搭乘15號巴士。</li>
+							<li>於港鐵香港站E出口的公共運輸交匯處，搭乘1號綠色小巴。</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="peak-content-container">
+					<h3>影片介紹</h3>
+					<div class="peak-content attraction-video-container">
+						<iframe class="attraction-video" width="560" height="315" src="https://www.youtube.com/embed/T-HxU6PcJ-Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+
+					<div class="peak-content attraction-video-container">
+						<iframe class="attraction-video" width="560" height="315" src="https://www.youtube.com/embed/T-HxU6PcJ-Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+
+
+
+	<div class="space"></div>
+
+
+
+
+	<!-- script -->
+	<script>
+	var rellax = new Rellax('.rellax');
+	</script>
+	<script src="js/split_scroll_effect.js"></script>
+	<script src="js/owl_carousel_setup.js"></script>
+	<script src="js/img_gallery.js"></script>
+</body>
+</html>
